@@ -23,11 +23,13 @@ class WordUnit:
 
     def get_id(self):
         return self.ID
+
     def set_id(self, ID):
         self.ID = ID
 
     def get_lemma(self):
         return self.lemma
+
     def set_lemma(self, lemma):
         self.lemma = lemma
 
@@ -48,6 +50,7 @@ class WordUnit:
 
     def get_dependency(self):
         return self.dependency
+        
     def set_dependency(self, dependency):
         self.dependency = dependency
 

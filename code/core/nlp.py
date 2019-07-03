@@ -10,7 +10,7 @@ sys.path.append("..")  # 先跳出当前目录
 from bean.word_unit import WordUnit
 from bean.sentence_unit import SentenceUnit
 from core.entity_combine import EntityCombine
-
+print(os.path.abspath('.'))
 
 class NLP:
     """进行自然语言处理，包括分词，词性标注，命名实体识别，依存句法分析
@@ -18,8 +18,8 @@ class NLP:
         default_user_dict_dir: str，用户自定义词典目录
         default_model_dir: str，ltp模型文件目录
     """
-    default_user_dict_dir = '../../resource/'  # 默认的用户词典目录，清华大学法律词典
-    default_model_dir = '../../model/'  # ltp模型文件目录
+    default_user_dict_dir = './resource/'  # 默认的用户词典目录，清华大学法律词典
+    default_model_dir = r'D:\\models\\ltp_data_v3.4.0'  # ltp模型文件目录
     
     def __init__(self, user_dict_dir=default_user_dict_dir, model_dir=default_model_dir):
         self.default_user_dict_dir = user_dict_dir
@@ -33,7 +33,7 @@ class NLP:
             # 文件夹则跳过
             if os.path.isdir(file):
                 continue
-            with open(file_path, 'r') as f:
+            with open(file_path, 'r',encoding='utf8') as f:
                 line = f.readline()
                 while line:
                     word = line.strip('\n').strip()

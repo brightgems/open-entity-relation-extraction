@@ -1,5 +1,4 @@
 import sys
-sys.path.append("..")  # 先跳出当前目录
 from bean.word_unit import WordUnit
 
 class EntityCombine:

@@ -1,5 +1,4 @@
 import sys
-sys.path.append("..")  # 先跳出当前目录
 from bean.word_unit import WordUnit
 from bean.sentence_unit import SentenceUnit
 from bean.entity_pair import EntityPair

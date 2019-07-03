@@ -10,11 +10,13 @@ class EntityPair:
 
     def get_entity1(self):
         return self.entity1
+
     def set_entity1(self, entity1):
         self.entity1 = entity1
 
     def get_entity2(self):
         return self.entity2
+
     def set_entity2(self, entity2):
         self.entity2 = entity2
 

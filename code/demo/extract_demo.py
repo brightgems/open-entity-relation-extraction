@@ -2,16 +2,15 @@ import os
 import re
 
 import sys
-sys.path.append("..")  # 先跳出当前目录
 from core.nlp import NLP
 from core.extractor import Extractor
 
 if __name__ == '__main__':
-    input_path = '../../data/input_text.txt'  # 输入的文本文件
-    output_path = '../../data/knowledge_triple.json'  # 输出的处理结果Json文件
+    input_path = './data/input_text.txt'  # 输入的文本文件
+    output_path = './data/knowledge_triple.json'  # 输出的处理结果Json文件
     if os.path.isfile(output_path):
         os.remove(output_path)
-    os.mknod(output_path)
+    # os.mkdir(output_path)
 
     print('Start extracting...')
 
@@ -20,7 +19,7 @@ if __name__ == '__main__':
     num = 1  # 知识三元组
 
 
-    f_in = open(input_path, 'r')
+    f_in = open(input_path, 'r',encoding='utf8')
     # 分句，获得句子列表
     origin_sentences = re.split('[。？！；]|\n', f_in.read())
     # 遍历每一篇文档中的句子
